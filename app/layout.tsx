@@ -6,22 +6,15 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
 	title: {
-		default: "chronark.com",
-		template: "%s | chronark.com",
+		default: "ocean-orange.com",
+		template: "%s | ocean-orange.com",
 	},
-	description: "Co-founder of unkey.dev and founder of planetfall.io",
+	description: "Fresh solutions for a sea of opportunities",
 	openGraph: {
-		title: "chronark.com",
-		description: "Co-founder of unkey.dev and founder of planetfall.io",
-		url: "https://chronark.com",
-		siteName: "chronark.com",
-		images: [
-			{
-				url: "https://chronark.com/og.png",
-				width: 1920,
-				height: 1080,
-			},
-		],
+		title: "ocean-orange.com",
+		description: "Fresh solutions for a sea of opportunities",
+		url: "https://ocean-orange.com",
+		siteName: "ocean-orange.com",
 		locale: "en-US",
 		type: "website",
 	},
@@ -37,11 +30,8 @@ export const metadata: Metadata = {
 		},
 	},
 	twitter: {
-		title: "Chronark",
+		title: "Ocean Orange",
 		card: "summary_large_image",
-	},
-	icons: {
-		shortcut: "/favicon.png",
 	},
 };
 const inter = Inter({
