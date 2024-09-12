@@ -1,7 +1,7 @@
 ---
-title: "@upstash/kafka"
+title: '@upstash/kafka'
 description: A fully typed Kafka client built for Upstash Kafka and HTTP, perfect for serverless and edge runtimes
-date: "2022-01-08"
+date: '2022-01-08'
 url: https://upstash.com/kafka
 repository: upstash/upstash-kafka
 published: true
@@ -34,12 +34,12 @@ npm install @upstash/kafka
 2. Copy the `REST API` secrets at the bottom of the page
 
 ```typescript
-import { Kafka } from "@upstash/kafka";
+import { Kafka } from '@upstash/kafka';
 
 const kafka = new Kafka({
-  url: "<UPSTASH_KAFKA_REST_URL>",
-  username: "<UPSTASH_KAFKA_REST_USERNAME>",
-  password: "<UPSTASH_KAFKA_REST_PASSWORD>",
+  url: '<UPSTASH_KAFKA_REST_URL>',
+  username: '<UPSTASH_KAFKA_REST_USERNAME>',
+  password: '<UPSTASH_KAFKA_REST_PASSWORD>'
 });
 ```
 
@@ -47,13 +47,13 @@ const kafka = new Kafka({
 
 ```typescript
 const p = kafka.producer();
-const message = { hello: "world" }; // Objects will get serialized using `JSON.stringify`
-const res = await p.produce("<my.topic>", message);
-const res = await p.produce("<my.topic>", message, {
+const message = { hello: 'world' }; // Objects will get serialized using `JSON.stringify`
+const res = await p.produce('<my.topic>', message);
+const res = await p.produce('<my.topic>', message, {
   partition: 1,
   timestamp: 12345,
-  key: "<custom key>",
-  headers: [{ key: "traceId", value: "85a9f12" }],
+  key: '<custom key>',
+  headers: [{ key: 'traceId', value: '85a9f12' }]
 });
 ```
 
@@ -65,15 +65,15 @@ The same options from the example above can be set for every message.
 const p = kafka.producer();
 const res = await p.produceMany([
   {
-    topic: "my.topic",
-    value: { hello: "world" },
+    topic: 'my.topic',
+    value: { hello: 'world' }
     // ...options
   },
   {
-    topic: "another.topic",
-    value: "another message",
+    topic: 'another.topic',
+    value: 'another message'
     // ...options
-  },
+  }
 ]);
 ```
 
@@ -88,10 +88,10 @@ coordination is completed.
 ```typescript
 const c = kafka.consumer();
 const messages = await c.consume({
-  consumerGroupId: "group_1",
-  instanceId: "instance_1",
-  topics: ["test.topic"],
-  autoOffsetReset: "earliest",
+  consumerGroupId: 'group_1',
+  instanceId: 'instance_1',
+  topics: ['test.topic'],
+  autoOffsetReset: 'earliest'
 });
 ```
 
@@ -104,16 +104,16 @@ While `consume` can handle committing automatically, you can also use
 `Consumer.commit` to manually commit.
 
 ```typescript
-const consumerGroupId = "mygroup";
-const instanceId = "myinstance";
-const topic = "my.topic";
+const consumerGroupId = 'mygroup';
+const instanceId = 'myinstance';
+const topic = 'my.topic';
 
 const c = kafka.consumer();
 const messages = await c.consume({
   consumerGroupId,
   instanceId,
   topics: [topic],
-  autoCommit: false,
+  autoCommit: false
 });
 
 for (const message of messages) {
@@ -125,8 +125,8 @@ for (const message of messages) {
     offset: {
       topic: message.topic,
       partition: message.partition,
-      offset: message.offset,
-    },
+      offset: message.offset
+    }
   });
 }
 ```
@@ -138,10 +138,10 @@ You can also manage offsets manually by using `Consumer.fetch`
 ```typescript
 const c = kafka.consumer();
 const messages = await c.fetch({
-  topic: "greeting",
+  topic: 'greeting',
   partition: 3,
   offset: 42,
-  timeout: 1000,
+  timeout: 1000
 });
 ```
 
