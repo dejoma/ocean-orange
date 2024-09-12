@@ -9,6 +9,9 @@ export const metadata: Metadata = {
 		default: "ocean-orange.com",
 		template: "%s | ocean-orange.com",
 	},
+	icons: {
+		icon: "/favicon.svg",
+	},
 	description: "Fresh solutions for a sea of opportunities",
 	openGraph: {
 		title: "ocean-orange.com",
