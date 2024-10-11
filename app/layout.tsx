@@ -1,10 +1,11 @@
 import '../global.css';
-import { Inter } from '@next/font/google';
-import LocalFont from '@next/font/local';
+import { Inter } from 'next/font/google';
+import LocalFont from 'next/font/local';
 import { Metadata } from 'next';
 import { Analytics } from './components/analytics';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ocean-orange.com'),
   title: {
     default: 'Ocean Orange',
     template: '%s | Ocean Orange - Fresh solutions for a sea of opportunities.'
@@ -19,7 +20,8 @@ export const metadata: Metadata = {
     'ocean orange',
     'technology',
     'software',
-    'software consultancy',
+    'consultancy',
+    'development',
     'AI implementation',
     'AI integration',
     'innovative solutions'

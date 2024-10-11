@@ -9,9 +9,6 @@
     "fmt": "bun prettier -w ."
   },
   "dependencies": {
-    "@next/font": "^13.5.4",
-    "@next/mdx": "^13.5.4",
-    "@upstash/redis": "^1.23.3",
     "contentlayer": "^0.3.4",
     "framer-motion": "^11.5.4",
     "lucide-react": "^0.284.0",

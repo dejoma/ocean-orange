@@ -1,28 +1,22 @@
 'use client';
-import { Github, Mail, Linkedin } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import Link from 'next/link';
 import { Navigation } from '../components/nav';
 import { Card } from '../components/card';
 
 const socials = [
   {
-    icon: <Linkedin size={20} />,
-    href: 'https://www.linkedin.com/in/djmstander/',
-    handle: 'Dennis',
-    label: 'LinkedIn'
+    icon: <Phone size={20} />,
+    href: '#',
+    handle: '+1 505 302 1519',
+    label: 'Phone'
   },
   {
     icon: <Mail size={20} />,
-    href: 'mailto:dennis@ocean-orange.com',
+    href: 'mailto:info@ocean-orange.com',
     label: 'Email',
-    handle: 'dennis@ocean-orange.com'
+    handle: 'info@ocean-orange.com'
   },
-  {
-    icon: <Github size={20} />,
-    href: 'https://github.com/dejoma',
-    label: 'Github',
-    handle: 'dejoma'
-  }
 ];
 
 export default function Contact() {
@@ -30,12 +24,12 @@ export default function Contact() {
     <div className='bg-gradient-to-tr from-orange-300 via-orange-400 to-orange-500'>
       <Navigation />
       <div className='container mx-auto flex min-h-screen items-center justify-center px-4'>
-        <div className='mx-auto mt-32 grid w-full grid-cols-1 gap-8 sm:mt-0 sm:grid-cols-3 lg:gap-16'>
-          {socials.map((s) => (
-            <Card>
+        <div className='mx-auto mt-32 grid w-full grid-cols-1 gap-8 sm:mt-0 sm:grid-cols-2 lg:gap-16'>
+          {socials.map((s,i) => (
+            <Card key={i}>
               <Link
                 href={s.href}
-                target='_blank'
+                target={s.href === '#' ? undefined : '_blank'}
                 className='group relative flex flex-col items-center gap-4 p-4 duration-700 md:gap-8 md:p-16 md:py-24 lg:pb-48'
               >
                 <span

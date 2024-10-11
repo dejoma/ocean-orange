@@ -3,13 +3,13 @@ import React from 'react';
 import Particles from './components/particles';
 import { TextEffect } from './components/text-effect';
 
-const navigation = [{ name: 'Contact', href: '/contact' }];
+const navigation = [{ name: 'Contact', href: '/contact' }, { name: 'Services', href: '/services' }];
 
 export default function Home() {
   return (
     <div className='flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-orange-300 via-orange-400 to-orange-500'>
       <Particles
-        className='absolute inset-0 -z-10 animate-fade-in' // Changed z-10 back to -z-10
+        className='absolute inset-0 -z-10 animate-fade-in'
         quantity={300}
         staticity={30}
         ease={20}
@@ -31,10 +31,10 @@ export default function Home() {
       </nav>
       <div className='animate-glow hidden h-px w-screen animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 md:block' />
       <Particles
-        className='absolute inset-0 z-10 animate-fade-in' // Changed -z-10 to z-10
+        className='absolute inset-0 z-10 animate-fade-in'
         quantity={300}
-        staticity={30} // Add this line to make particles more responsive
-        ease={20} // Add this line to make movement smoother
+        staticity={30}
+        ease={20}
       />
       <h1 className='text-edge-outline z-10 animate-title cursor-default whitespace-nowrap bg-white bg-clip-text px-0.5 py-3.5 font-display text-4xl text-transparent duration-1000 sm:text-6xl md:text-9xl'>
         ocean orange
