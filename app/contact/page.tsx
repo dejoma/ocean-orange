@@ -16,7 +16,7 @@ const socials = [
     href: 'mailto:info@ocean-orange.com',
     label: 'Email',
     handle: 'info@ocean-orange.com'
-  },
+  }
 ];
 
 export default function Contact() {
@@ -25,7 +25,7 @@ export default function Contact() {
       <Navigation />
       <div className='container mx-auto flex min-h-screen items-center justify-center px-4'>
         <div className='mx-auto mt-32 grid w-full grid-cols-1 gap-8 sm:mt-0 sm:grid-cols-2 lg:gap-16'>
-          {socials.map((s,i) => (
+          {socials.map((s, i) => (
             <Card key={i}>
               <Link
                 href={s.href}

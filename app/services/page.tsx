@@ -12,18 +12,21 @@ const services = [
   {
     icon: <Globe size={20} />,
     title: 'AI Integration',
-    description: 'Seamlessly incorporate AI technologies into your existing infrastructure for enhanced capabilities.'
+    description:
+      'Seamlessly incorporate AI technologies into your existing infrastructure for enhanced capabilities.'
   },
   {
     icon: <Palette size={20} />,
     title: 'Backend Development',
-    description: 'Backend development for any application, and architectural design for a robust and scalable system.'
+    description:
+      'Backend development for any application, and architectural design for a robust and scalable system.'
   },
   {
     icon: <Zap size={20} />,
     title: 'Performance Optimization',
-    description: 'Enhance your application\'s speed and efficiency for better user engagement.'
-  },
+    description:
+      "Enhance your application's speed and efficiency for better user engagement."
+  }
 ];
 
 export default function Services() {
@@ -32,8 +35,18 @@ export default function Services() {
       <Navigation />
       <div className='container mx-auto flex min-h-screen items-center justify-center px-4'>
         <div className='mx-auto mt-32 w-full max-w-5xl'>
-          <h1 className='mb-8 text-center text-4xl font-bold text-white'>Our Services</h1>
-          <p className='mb-12 text-center text-l text-zinc-100'>Ocean Orange offers a range of professional web services to help your business thrive online.</p>
+          <h1 className='mb-8 text-center text-4xl font-bold text-white'>
+            Our Services
+          </h1>
+          <p className='text-l mb-12 text-center text-zinc-100'>
+            We offer a range of IT and web services to help your business. Some
+            of the technologies we use are:
+            <span>
+              <br />
+            </span>
+            Next.js, Python (FastAPI), Ruby (Rails), C++, AI integration
+            libraries like Langchain and Vercel's AI SDK
+          </p>
           <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-12'>
             {services.map((s, i) => (
               <Card key={i}>

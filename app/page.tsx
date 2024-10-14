@@ -3,7 +3,10 @@ import React from 'react';
 import Particles from './components/particles';
 import { TextEffect } from './components/text-effect';
 
-const navigation = [{ name: 'Contact', href: '/contact' }, { name: 'Services', href: '/services' }];
+const navigation = [
+  { name: 'Contact', href: '/contact' },
+  { name: 'Services', href: '/services' }
+];
 
 export default function Home() {
   return (
